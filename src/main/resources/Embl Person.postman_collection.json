@@ -1,0 +1,147 @@
+{
+  "info": {
+    "_postman_id": "2f431bbd-acf8-4cbd-a374-db1947cfc9db",
+    "name": "Embl Person",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Get All Person",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:9090/person/api/v1/persons",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "9090",
+          "path": [
+            "person",
+            "api",
+            "v1",
+            "persons"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete Person by Id",
+      "request": {
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n\r\n  \"person\": [{\r\n      \"first_name\": \"John\",\r\n      \"last_name\": \"Smith\"\r\n      \r\n    }\r\n  ]\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:9090/person/api/v1/person/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "9090",
+          "path": [
+            "person",
+            "api",
+            "v1",
+            "person",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Save Person",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"person\": [{\r\n    \t\"first_name\" : \"Johns\",\r\n    \t\"last_name\" : \"Smiths\",\r\n    \t\"age\" : \"29\",\r\n    \t\"favorite_colour\" : \"red\",\r\n    \t\"hobby\" : [\"shopping\",\"football\"]\r\n    },\r\n    {\r\n    \t\"first_name\" : \"Sarah\",\r\n    \t\"last_name\" : \"Connor\",\r\n    \t\"age\" : \"54\",\r\n    \t\"favorite_colour\" : \"blue\",\r\n    \t\"hobby\" : [\"chess\"]\r\n    }]\r\n}\r\n\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:9090/person/api/v1/person",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "9090",
+          "path": [
+            "person",
+            "api",
+            "v1",
+            "person"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update Person",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "type": "text",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"person\": [{\r\n    \t\"first_name\" : \"Johns\",\r\n    \t\"last_name\" : \"Smiths\",\r\n    \t\"age\" : \"29\",\r\n    \t\"favorite_colour\" : \"red\",\r\n    \t\"hobby\" : [\"shopping\",\"football\"]\r\n    },\r\n    {\r\n    \t\"first_name\" : \"Sarah\",\r\n    \t\"last_name\" : \"Connor\",\r\n    \t\"age\" : \"54\",\r\n    \t\"favorite_colour\" : \"blue\",\r\n    \t\"hobby\" : [\"chess\"]\r\n    }]\r\n}\r\n\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:9090/person/api/v1/person",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "9090",
+          "path": [
+            "person",
+            "api",
+            "v1",
+            "person"
+          ]
+        }
+      },
+      "response": []
+    }
+  ],
+  "protocolProfileBehavior": {}
+}
